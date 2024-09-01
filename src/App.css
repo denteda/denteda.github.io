@@ -1,38 +1,221 @@
-.App {
+/* App.css */
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('./assets/fonts/centurygothic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('./assets/fonts/centurygothic_bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
+  background-color: #1e1e1e; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+}
+
+/* Navbar Styles */
+nav {
+  display: flex;
+  justify-content: center; /* Center all items horizontally */
+  align-items: center;
+  background-color: #333; /* Dark background for navbar */
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem; /* Rounded bottom corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  position: relative; /* Allow positioning of child elements */
+}
+
+/* Center the logo and navigation links */
+.logo {
+  width: 150px; /* Adjust as needed */
+  height: auto;
+  border-radius: 0.5rem; /* Slightly rounded corners for the logo */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  margin-left: auto; /* Pushes the ul to the right if needed */
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e0e0e0; /* Light text color */
+  padding: 0.5rem 1rem; /* Add padding for clickable areas */
+  border-radius: 0.5rem; /* Rounded corners for links */
+}
+
+nav ul li a:hover {
+  background-color: #444; /* Slightly lighter background on hover */
+  border-radius: 0.5rem;
+}
+/* Home Component Styles */
+.home {
   text-align: center;
+  padding: 2rem;
+  background-color: #1e1e1e; /* Dark background */
+  color: #e0e0e0; /* Light text color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home .emblem {
+  width: 190px; /* Emblem dimensions */
+  height: 184px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem; /* Rounded corners for emblem */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* About and Contact Component Styles */
+.about, .contact {
+  padding: 2rem;
+  background-color: #1e1e1e; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #333;
+  background-color: #333;
+  color: #e0e0e0;
+  border-radius: 0.5rem; /* Rounded corners for input fields */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  padding: 0.75rem;
+  border: none;
+  background-color: #444;
+  color: #e0e0e0;
+  cursor: pointer;
+  border-radius: 0.5rem; /* Rounded corners for button */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #555; /* Slightly lighter background on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0; /* Rounded top corners */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #444; /* Dark background for button */
+  color: #e0e0e0; /* Light text color */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: 'Century Gothic', sans-serif; /* Apply font */
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-button:hover {
+  background-color: #555; /* Lighter background on hover */
+}
+
+.dropdown-menu {
+  display: block;
+  position: absolute;
+  background-color: #333; /* Dark background for menu */
+  color: #e0e0e0; /* Light text color */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for menu */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  top: 100%; /* Aligns dropdown below button */
+  left: 0;
+  min-width: 160px; /* Minimum width for dropdown */
+  max-width: 200px; /* Maximum width to prevent overflow */
+  z-index: 1000;
+  max-height: 300px; /* Limit the height of the dropdown */
+  overflow-y: auto; /* Add scroll if content exceeds max height */
+}
+
+.dropdown-item {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #444; /* Lighter background on hover */
+}
+
+/* Ensure the dropdown does not go off the viewport */
+.dropdown-menu {
+  right: 0; /* Align to the right */
+  left: auto; /* Disable default left alignment */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+    width: 100vw; /* Full width on smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .home .emblem {
+    width: 100px; /* Smaller size for smaller screens */
   }
+}
+
+.social-media-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  background-color: #333;
+}
+
+.social-media-header a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-media-header a:hover {
+  color: #ddd;
 }
