@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/denteda/static/css/main.fe78a65c.css",
+    "main.js": "/denteda/static/js/main.8d0d67c1.js",
+    "static/js/453.240ae6fc.chunk.js": "/denteda/static/js/453.240ae6fc.chunk.js",
+    "static/media/centurygothic.ttf": "/denteda/static/media/centurygothic.b194aa2bd524e2c973f7.ttf",
+    "static/media/centurygothic_bold.ttf": "/denteda/static/media/centurygothic_bold.861d22617fdfce5fc922.ttf",
+    "static/media/emblem_black.png": "/denteda/static/media/emblem_black.c6b21bf8dc856126cb94.png",
+    "static/media/logo_black.png": "/denteda/static/media/logo_black.faed3ce639f72699e12b.png",
+    "index.html": "/denteda/index.html",
+    "main.fe78a65c.css.map": "/denteda/static/css/main.fe78a65c.css.map",
+    "main.8d0d67c1.js.map": "/denteda/static/js/main.8d0d67c1.js.map",
+    "453.240ae6fc.chunk.js.map": "/denteda/static/js/453.240ae6fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe78a65c.css",
+    "static/js/main.8d0d67c1.js"
+  ]
+}
